@@ -2,7 +2,7 @@ package package1;
 
 import java.awt.Graphics;
 
-public class TrainCercle implements IObjetDessinable {
+public class TrainCercle implements IObjetAnimable {
 
 	 //------- variables d'instance (attributs) --------------------------
     /**
