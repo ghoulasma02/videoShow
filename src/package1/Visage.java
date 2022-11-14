@@ -1,6 +1,6 @@
 package package1;
 
-
+import java.awt.*;
 import java.awt.Graphics;
 
 public class Visage implements IObjetAnimable{
@@ -283,8 +283,19 @@ public class Visage implements IObjetAnimable{
      * @see Dessinable
      */
     public void dessiner(Graphics g) {
+    	
+    	 Graphics2D g2 = ( Graphics2D) g.create();
+    	 g2.setColor(Color.BLACK);
+    	 g2.setStroke(new BasicStroke(4.0f));
+    	  g2.drawOval(xhg, yhg, largeur, hauteur);
+    	 g2.setPaint(Color.PINK);
+    	 g2.fillOval(xhg, yhg, largeur, hauteur);
+    	 
+    	 
+    	 
+    	 
         // dessiner le contour du visage
-        g.drawOval(xhg, yhg, largeur, hauteur);
+        //g.drawOval(xhg, yhg, largeur, hauteur);
 
         // dessiner la bouche
         if (impassible) {
